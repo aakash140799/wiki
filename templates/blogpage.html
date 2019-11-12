@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <a href='/_edit/{{pagedict.get('title','')}}'>edit</a>
+    <br>
+    
+    <label> submitted_time: {{pagedict.get('submitted_date','')}} </label>
+    <br>
+    
+    <label> queryed in {{pagedict.get('query_time','')}} </label>
+    <br>
+    
+
+    <label> Author: {{pagedict.get('author','')}} </label>
+    <br>
+    
+    <pre> {{pagedict.get('content')}} </pre>
+{% endblock %}

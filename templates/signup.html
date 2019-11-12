@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title> signup </title>
+</head>
+
+<body>
+    <form method="POST">
+        <label> username </label>
+        <input name='username' type='text' value='{{pagedict.get('username','')}}'>
+        <label> {{pagedict.get('errusername','')}} </label>
+        <br>
+
+        <label> password </label>
+        <input name='password' type='password' value=''>
+        <label> {{pagedict.get('errpassword','')}} </label>
+        <br>
+
+        <label> password(verify) </label>
+        <input name='verify' type='password' value=''>
+        <label> {{pagedict.get('errverify','')}} </label>
+        <br>
+
+        <label> email(optional) </label>
+        <input name='email' type='text' value='{{pagedict.get('email','')}}'>
+        <label> {{pagedict.get('erremail','')}} </label>
+        <br>
+
+        {{pagedict.get('errdb','')}}
+        <br>
+        <input type='submit'>
+    </form>
+</body>

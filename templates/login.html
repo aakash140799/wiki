@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title> Login </title>
+</head>
+
+<body>
+    <form method="POST">
+        <label> username </label>
+        <input name='username' type='text' value={{pagedict.get('username','')}}>
+        <br>
+
+        <label> password </label>
+        <input name='password' type='password' value=''>
+        <br>
+
+        <label> {{pagedict.get('error','')}} </label>
+        <br>
+
+        <input type='submit'>
+    </form>
+</body>

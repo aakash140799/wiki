@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    Hello
+    {% if pagedict.get('username') %}
+        {{pagedict.get('username')}}
+    {% endif %}
+
+    {% if pagedict.get('blogs') %}
+        {% for blog in pagedict['blogs'] %}
+            <br><hr>
+            <a href ='/blog/{{blog['title']}}' > {{blog['title']}} </a>
+            <br>
+
+            {{blog['submitted_date']}}<br>
+            {{blog['author']}}<br>
+            {{blog['content']}}
+            <br>
+        {% endfor %}
+        <br> 
+        queryed in {{pagedict.get('query_time')}}
+    {% endif %}
+            
+{% endblock %}

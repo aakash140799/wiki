@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title> wiki blog </title>
+</head>
+
+
+<body>
+    
+    <div>
+    {% if pagedict.get('username',False) %}
+        <a href="/submit"> submit </a>
+        <label >|</label>
+        <a href="/logout/"> logout </a>
+    {% else %}
+        <a href="/login"> login </a>
+        <label> |</label>
+        <a href="/signup/"> signup </a>
+    {% endif %}
+    <br>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    {% block content %}
+    {% endblock %}
+</body>

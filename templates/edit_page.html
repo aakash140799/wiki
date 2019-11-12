@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method='post'>
+    <label> title </label>
+    {% if pagedict.get('update',False) %}
+        <label> {{pagedict.get('title','')}} </label>
+        <input name='title' type='hidden' value='{{pagedict.get('title','')}}'>
+    {% else %}
+        <input name='title' type='text' value='{{pagedict.get('title','')}}'>
+    {% endif %}
+    
+    <label> {{pagedict.get('errtitle','')}} </label>
+    <br>
+
+    <label> content </label>
+    <textarea name = 'content'>{{pagedict.get('content','')}}</textarea>
+    <label> {{pagedict.get('errcontent','')}} </label>
+    <br>
+
+    {{pagedict.get('dberror','')}}
+    <input type='submit'>
+</form>
+
+{% endblock %}
